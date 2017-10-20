@@ -1,0 +1,51 @@
+version: '2'
+
+services:
+  db:
+    image: mariadb:10.0.26
+    volumes: 
+      - ./mariadb.cnf:/etc/mysql/conf.d/mariadb.cnf
+      - /home/meir/workspaces/mariadb/10.1.22:/var/lib/mysql
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: s3EqNi425T
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel
+      MYSQL_DATABASE: laravel
+    security_opt:
+      - label:disable
+    ports:
+      - "3306:3306"
+  webserver:
+    image: nginx:1.10.1
+    volumes:
+      - ../nginx.conf:/etc/nginx/nginx.conf
+      - ../virtualhost.conf:/etc/nginx/conf.d/virtualhost.conf
+      - ../../ssl:/etc/nginx/ssl
+      - /home/meir/workspaces/PHP:/var/www/html
+    links:
+      - db
+      - php
+    ports:
+      - "80:80"
+      - "443:443"
+    security_opt:
+      - label:disable
+  php:
+    image: sysbind/php:7.0-fpm
+    volumes:
+      - /home/meir/workspaces/PHP:/var/www/html
+      - /home/meir/workspaces/moodledata:/var/www/moodledata
+      - ../../php.ini:/usr/local/etc/php/php.ini
+    security_opt:
+      - label:disable
+    links:
+      - db
+      - memcached
+      - redis
+    environment:
+      UID: 1000
+  memcached:
+    image: memcached
+  redis:
+    image: redis
