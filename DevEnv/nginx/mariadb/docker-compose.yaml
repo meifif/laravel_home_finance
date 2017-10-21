@@ -36,7 +36,6 @@ services:
     image: sysbind/php:7.0-fpm
     volumes:
       - /home/meir/workspaces/PHP:/var/www/html
-      - /home/meir/workspaces/moodledata:/var/www/moodledata
       - ../../php.ini:/usr/local/etc/php/php.ini
     security_opt:
       - label:disable
