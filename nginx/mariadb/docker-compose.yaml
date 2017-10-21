@@ -6,12 +6,12 @@ services:
     volumes: 
       - ./mariadb.cnf:/etc/mysql/conf.d/mariadb.cnf
       - /home/meir/workspaces/mariadb/10.1.22:/var/lib/mysql
-    restart: on-failure
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: s3EqNi425T
-      MYSQL_USER: laravel
-      MYSQL_PASSWORD: laravel
-      MYSQL_DATABASE: laravel
+      MYSQL_USER: moealt
+      MYSQL_PASSWORD: moealt
+      MYSQL_DATABASE: moealt
     security_opt:
       - label:disable
     ports:
@@ -23,6 +23,7 @@ services:
       - ../virtualhost.conf:/etc/nginx/conf.d/virtualhost.conf
       - ../../ssl:/etc/nginx/ssl
       - /home/meir/workspaces/PHP:/var/www/html
+      - /home/meir/workspaces/moodledata:/var/www/moodledata
     links:
       - db
       - php

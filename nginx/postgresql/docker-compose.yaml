@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+  db:
+    image: postgres:latest
+    volumes: 
+      - /your/local/dir/for/pgsql:/var/lib/pgsql/
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: moodlepg
+      POSTGRES_USER: sysbind
+      PGDATA: /var/lib/pgsql/data
+      POSTGRES_DB: moodle
+      POSTGRES_INITDB_ARGS: --pgdata=/var/lib/pqsql/data/
+    security_opt:
+      - label:disable
+  webserver:
+    image: nginx:latest
+    volumes:
+      - ../nginx.conf:/etc/nginx/nginx.conf
+      - ../virtualhost.conf:/etc/nginx/conf.d/virtualhost.conf
+      - /your/workspaces/PHP:/your/workspaces/PHP/used/by/virtualhost
+      - /your/moodledata:/yourworkspace/moodledata
+    links:
+      - db
+      - php
+    ports:
+      - "80:80"
+      - "443:443"
+    security_opt:
+      - label:disable
+  php:
+    image: sysbind/php:7.0-fpm
+    volumes:
+      - /your/workspaces/PHP:/your/workspaces/PHP/used/by/virtualhost
+      - /your/moodledata:/yourworkspace/moodledata
+    security_opt:
+      - label:disable
+    links:
+      - db
