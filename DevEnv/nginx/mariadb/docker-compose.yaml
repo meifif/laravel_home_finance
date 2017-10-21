@@ -33,7 +33,7 @@ services:
     security_opt:
       - label:disable
   php:
-    image: sysbind/php:7.0-fpm
+    image: sysbind/php:7.1-fpm
     volumes:
       - /home/meir/workspaces/PHP:/var/www/html
       - ../../php.ini:/usr/local/etc/php/php.ini
