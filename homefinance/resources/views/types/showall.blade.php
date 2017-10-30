@@ -1,5 +1,8 @@
 @extends ('master')
 @section('content')
+
+<a href = '/type/create' class="btn btn-info">צור סיווג חדש</a> 
+<br><br>
 <script src="/js/appjs/typehelper.js"></script>
 <table class="table table-hover">
   <thead>

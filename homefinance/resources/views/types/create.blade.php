@@ -14,6 +14,7 @@
     <textarea type="text" class="form-control" name="description" id="description" placeholder="לדוגמא: הוצאות התקשורת השונות כגון טלפונים ניידים, טלפון קווי, פק ותשתית האינטרנט וכו" required></textarea>
   </div>
     <button type="submit" class="btn btn-primary">צור</button>
+        <a href="{{ url()->previous() }}" class="btn btn-info">חזור</a>
 </form>
 
 @include('parts.errors')

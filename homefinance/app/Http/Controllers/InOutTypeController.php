@@ -27,11 +27,28 @@ class InOutTypeController extends Controller
 	public function store()
 	{
 		$this->validate(request(), [
-				'name' 		  => 'required|alpha_num',
-				'description' => 'required|alpha_num'
+				'name' 		  => 'required|string',
+				'description' => 'required|string'
 				
 		]);
 		\App\in_out_type::create(request(['name', 'description']));
 		return redirect('/type');
+	}
+	
+	public function show(in_out_type $type)
+	{
+		return view('types.type', compact('type'));
+	}
+	
+	public function update(in_out_type $type)
+	{
+		$this->validate(request(), [
+				'name' 		  => 'required|string',
+				'description' => 'required|string'
+				
+		]);
+		$type->update(request()->all());
+		return redirect('/type');
+		
 	}
 }
