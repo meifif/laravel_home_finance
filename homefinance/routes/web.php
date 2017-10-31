@@ -19,9 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//types management
+//types route
 Route::get('/type', 'InOutTypeController@index');
 Route::get('/type/create', 'InOutTypeController@create');
 Route::post('/type', 'InOutTypeController@store');
 Route::get('/type/{type}', 'InOutTypeController@show');
 Route::patch('/type/{type}', 'InOutTypeController@update');
+
+//income route
+Route::get('/income', 'IncomeController@index');
+Route::get('/income/create', 'IncomeController@create');
+Route::post('/income', 'IncomeController@store');
+Route::get('/income/{income}', 'IncomeController@show');
+Route::patch('/income/{income}', 'IncomeController@update');

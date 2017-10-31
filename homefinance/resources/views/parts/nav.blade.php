@@ -33,7 +33,7 @@
               <a href="/type">סיווג הכנסות/הוצאות</a>
             </li>
             <li>
-              <a href="cards.html">הכנסות</a>
+              <a href="/income">הכנסות</a>
             </li>
             <li>
               <a href="cards.html">הוצאות</a>
