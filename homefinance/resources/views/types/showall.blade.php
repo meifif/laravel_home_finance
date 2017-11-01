@@ -1,5 +1,6 @@
 @extends ('master')
 @section('content')
+@include('parts.datatables')
 
 <a href = '/type/create' class="btn btn-info">צור סיווג חדש</a> 
 <br><br>
@@ -25,6 +26,5 @@
   @endforeach
   </tbody>
 </table>
-
 
 @endsection('content')

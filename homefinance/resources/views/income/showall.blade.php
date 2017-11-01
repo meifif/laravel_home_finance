@@ -1,5 +1,6 @@
 @extends ('master')
 @section('content')
+@include('parts.datatables')
 
 <a href = '/income/create' class="btn btn-info">צור הכנסה חדשה</a> 
 <br><br>
