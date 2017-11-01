@@ -21,9 +21,6 @@ class IncomeController extends Controller
     {
     	
     	$incomes = income::all();
-    	foreach ($incomes as $income) {
-    		dd($income->getParent());
-    	}
     	return view('income.showall', compact('incomes'));
     }
 
@@ -73,9 +70,10 @@ class IncomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(income $income)
     {
-        //
+    	$parents = \App\in_out_type::pluck('name', 'id');
+    	return view('income.edit', compact('income', 'parents'));
     }
 
     /**
@@ -85,9 +83,16 @@ class IncomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, income $income)
     {
-        //
+    	$this->validate(request(), [
+    			'name' 	   => 'required|string',
+    			'comments' => 'required|string',
+    			'parent'   => 'required|integer'
+    			
+    	]);
+    	$income->update(request()->all());
+    	return redirect('/income');
     }
 
     /**

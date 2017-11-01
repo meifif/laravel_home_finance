@@ -30,5 +30,5 @@ Route::patch('/type/{type}', 'InOutTypeController@update');
 Route::get('/income', 'IncomeController@index');
 Route::get('/income/create', 'IncomeController@create');
 Route::post('/income', 'IncomeController@store');
-Route::get('/income/{income}', 'IncomeController@show');
+Route::get('/income/{income}', 'IncomeController@edit');
 Route::patch('/income/{income}', 'IncomeController@update');

@@ -19,7 +19,7 @@
     <tr>
       <th scope="row"> <a href="/income/{{ $income->id }}">{{ $income->id }}</a></th>
       <td>{{ $income->name }}</td>
-      <td>{{ $income->parent }}</td>
+      <td>{{ $income->getParent->name }}</td>
       <td>{{ $income->comments }}</td>
       <td>{{ $income->updated_at }}</td>
     </tr>
