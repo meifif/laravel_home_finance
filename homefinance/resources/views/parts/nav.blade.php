@@ -1,5 +1,5 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="/">My Home Finance</a>
+    <a class="navbar-brand" href="/">ניהול תקציב משפחת יפרח</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,18 +25,27 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+            <i class="fa fa-fw  fa-puzzle-piece"></i>
             <span class="nav-link-text">ניהול רכיבים</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="/type">סיווג הכנסות/הוצאות</a>
+              <a href="/type">
+                <i class="fa fa-fw  fa-cubes"></i>
+                <span class="nav-link-text">סיווג הכנסות/הוצאות</span>
+              </a>
             </li>
             <li>
-              <a href="/income">הכנסות</a>
+              <a href="/income">
+              <i class="fa fa-fw   fa-plus"></i>
+              <span class="nav-link-text">הכנסות</span>
+              </a>
             </li>
             <li>
-              <a href="cards.html">הוצאות</a>
+              <a href="/expense">
+              <i class="fa fa-fw  fa-minus"></i>
+              <span class="nav-link-text">הוצאות</span>
+              </a>
             </li>
           </ul>
         </li>

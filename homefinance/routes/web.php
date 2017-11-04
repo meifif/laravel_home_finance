@@ -32,3 +32,10 @@ Route::get('/income/create', 'IncomeController@create');
 Route::post('/income', 'IncomeController@store');
 Route::get('/income/{income}', 'IncomeController@edit');
 Route::patch('/income/{income}', 'IncomeController@update');
+
+//expenses route
+Route::get('/expense', 'ExpenseController@index');
+Route::get('/expense/create', 'ExpenseController@create');
+Route::post('/expense', 'ExpenseController@store');
+Route::get('/expense/{expense}', 'ExpenseController@edit');
+Route::patch('/expense/{expense}', 'ExpenseController@update');
