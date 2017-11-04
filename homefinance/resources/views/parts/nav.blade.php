@@ -8,19 +8,19 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.html">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text">לוח הבקרה</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="charts.html">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
+            <span class="nav-link-text">בקרה חודשית</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="tables.html">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Tables</span>
+            <span class="nav-link-text">מחסנים</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -51,21 +51,33 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file"></i>
-            <span class="nav-link-text">Example Pages</span>
+            <i class="fa fa-fw fa-tasks"></i>
+            <span class="nav-link-text">תסריטים</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-            <li>
-              <a href="login.html">Login Page</a>
+		<li>
+              <a href="/type">
+                <i class="fa fa-fw   fa-fast-backward"></i>
+                <span class="nav-link-text">עבר</span>
+              </a>
             </li>
             <li>
-              <a href="register.html">Registration Page</a>
+              <a href="/income">
+              <i class="fa fa-fw fa-pause"></i>
+              <span class="nav-link-text">נוכחי</span>
+              </a>
             </li>
             <li>
-              <a href="forgot-password.html">Forgot Password Page</a>
+              <a href="/expense">
+              <i class="fa fa-fw  fa-fast-forward"></i>
+              <span class="nav-link-text">עתיד</span>
+              </a>
             </li>
             <li>
-              <a href="blank.html">Blank Page</a>
+              <a href="/expense">
+              <i class="fa fa-fw  fa-plus-square"></i>
+              <span class="nav-link-text">יצירת תסריט חדש</span>
+              </a>
             </li>
           </ul>
         </li>
