@@ -8,48 +8,22 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.html">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">לוח הבקרה</span>
+            <span class="nav-link-text">מרכז שליטה</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
+            <i class="fa fa-fw fa-eye "></i>
             <span class="nav-link-text">בקרה חודשית</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="tables.html">
-            <i class="fa fa-fw fa-table"></i>
+            <i class="fa fa-fw fa-archive"></i>
             <span class="nav-link-text">מחסנים</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw  fa-puzzle-piece"></i>
-            <span class="nav-link-text">ניהול רכיבים</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
-            <li>
-              <a href="/type">
-                <i class="fa fa-fw  fa-cubes"></i>
-                <span class="nav-link-text">סיווג הכנסות/הוצאות</span>
-              </a>
-            </li>
-            <li>
-              <a href="/income">
-              <i class="fa fa-fw   fa-plus"></i>
-              <span class="nav-link-text">הכנסות</span>
-              </a>
-            </li>
-            <li>
-              <a href="/expense">
-              <i class="fa fa-fw  fa-minus"></i>
-              <span class="nav-link-text">הוצאות</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+         <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-tasks"></i>
             <span class="nav-link-text">תסריטים</span>
@@ -77,6 +51,52 @@
               <a href="/expense">
               <i class="fa fa-fw  fa-plus-square"></i>
               <span class="nav-link-text">יצירת תסריט חדש</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Example Pages">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Monitoring" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-balance-scale"></i>
+            <span class="nav-link-text">בקרה</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="Monitoring">
+		<li>
+              <a href="/type">
+                <i class="fa fa-fw fa-calendar-check-o"></i>
+                <span class="nav-link-text">בקרה חודשית</span>
+              </a>
+            </li>
+            <li>
+              <a href="/income">
+              <i class="fa fa-fw fa-calendar"></i>
+              <span class="nav-link-text">בקרה שנתית</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-fw  fa-puzzle-piece"></i>
+            <span class="nav-link-text">ניהול רכיבים</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="/type">
+                <i class="fa fa-fw  fa-cubes"></i>
+                <span class="nav-link-text">סיווג הכנסות/הוצאות</span>
+              </a>
+            </li>
+            <li>
+              <a href="/income">
+              <i class="fa fa-fw   fa-plus"></i>
+              <span class="nav-link-text">הכנסות</span>
+              </a>
+            </li>
+            <li>
+              <a href="/expense">
+              <i class="fa fa-fw  fa-minus"></i>
+              <span class="nav-link-text">הוצאות</span>
               </a>
             </li>
           </ul>
@@ -218,7 +238,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            <i class="fa fa-fw fa-sign-out"></i>{{ Auth::user()->name }}</a>
         </li>
       </ul>
     </div>
