@@ -30,25 +30,25 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
 		<li>
-              <a href="/type">
+              <a href="/scenario/past">
                 <i class="fa fa-fw   fa-fast-backward"></i>
                 <span class="nav-link-text">עבר</span>
               </a>
             </li>
             <li>
-              <a href="/income">
+              <a href="/scenario/current">
               <i class="fa fa-fw fa-pause"></i>
               <span class="nav-link-text">נוכחי</span>
               </a>
             </li>
             <li>
-              <a href="/expense">
+              <a href="/scenario/future">
               <i class="fa fa-fw  fa-fast-forward"></i>
               <span class="nav-link-text">עתיד</span>
               </a>
             </li>
             <li>
-              <a href="/expense">
+              <a href="/scenario/create">
               <i class="fa fa-fw  fa-plus-square"></i>
               <span class="nav-link-text">יצירת תסריט חדש</span>
               </a>

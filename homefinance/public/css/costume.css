@@ -1,6 +1,48 @@
 @CHARSET "UTF-8";
 
+body {
+	font-family: Varela Round;
+}
 #content {
 	text-align: right;
 	direction: rtl;
 }
+
+.scenariondiv {
+	border-radius: 4px;
+	color: white;
+	padding: 2px;
+	    padding: 11px;
+    margin-bottom: 5px;
+}
+
+.income {
+	background-color: #aebd38
+	
+}
+
+.fixexpance {
+	background-color: #505160
+	
+}
+
+.chengeexpance {
+	background-color: #68829e
+}
+
+.scenariondiv h2 {
+	display: inline;
+}
+.scenariondiv button {
+	float: left;
+	cursor: pointer;
+}
+
+.incomeslist {
+	display: none;
+	
+}
+
+
+
+

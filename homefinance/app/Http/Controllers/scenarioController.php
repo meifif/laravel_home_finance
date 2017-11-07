@@ -46,6 +46,7 @@ class scenarioController extends Controller
     {
         $incomes = income::all();
         $expances = Expense::all();
+        return view('scenario.create', compact('incomes', 'expances'));
     }
 
     /**
