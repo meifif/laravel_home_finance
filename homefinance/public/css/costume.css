@@ -11,8 +11,7 @@ body {
 .scenariondiv {
 	border-radius: 4px;
 	color: white;
-	padding: 2px;
-	    padding: 11px;
+	padding: 11px;
     margin-bottom: 5px;
 }
 
@@ -30,19 +29,40 @@ body {
 	background-color: #68829e
 }
 
-.scenariondiv h2 {
+.scenariondiv h2,
+.incomeslist h4,
+.expancesslist h4 {
 	display: inline;
 }
-.scenariondiv button {
+.scenariondiv button,
+.incomeslist button,
+.expancesslist button {
 	float: left;
 	cursor: pointer;
 }
 
-.incomeslist {
+.incomeslist, .expancesslist {
+    padding: 11px;
+    background-color: #c4dfe6;
+    border-radius: 4px;
+	width: 35%;
 	display: none;
-	
+	border: 1px solid #ced4da;
+    border-radius: .25rem;
+	position: fixed;
+    z-index: 2; /* Make sure its above other items. */
+    top: 50%;
+    left: 50%;
+    margin-top: -10%; /* Changes with height. */
+    margin-left: -10%; /* Your width divided by 2. */
 }
 
+.scenariondiv table {
+	width: 80%;
+}
 
+/* table .form-control { */
+/* 	width: 20%; */
+/* } */
 
 

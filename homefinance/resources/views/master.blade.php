@@ -17,7 +17,7 @@
   <link href="/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="/css/sb-admin.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Varela+Round" rel="stylesheet">   
+  <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Varela+Round" rel="stylesheet"> 
   
 </head>
 
@@ -71,6 +71,10 @@
     <!-- Custom scripts for this page-->
     <script src="/js/sb-admin-datatables.min.js"></script>
     <script src="/js/sb-admin-charts.min.js"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
   </div>
 </body>
 
