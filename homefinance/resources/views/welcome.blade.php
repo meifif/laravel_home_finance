@@ -83,7 +83,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    !המקום לנהל את התקציב הביתי שלכם
+				@lang('core.homewelcome')
                 </div>
             </div>
         </div>
