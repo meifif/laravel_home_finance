@@ -99,6 +99,12 @@
               <span class="nav-link-text">הוצאות</span>
               </a>
             </li>
+            <li>
+              <a href="/paymethod">
+              <i class="fa fa-fw  fa-cc-visa"></i>
+              <span class="nav-link-text">@lang('nav.paymethod')</span>
+              </a>
+            </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">

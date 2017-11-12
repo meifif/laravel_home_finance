@@ -64,5 +64,7 @@ body {
 /* table .form-control { */
 /* 	width: 20%; */
 /* } */
-
+.paymethod{
+	width: 50%;
+}
 

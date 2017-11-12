@@ -16,6 +16,8 @@ return [
     'name' => 'שם',
 	'description' => 'תיאור',
 	'homewelcome' => 'המקום לניהול התקציב הביתי שלכם',
-
-
+    'delete' => 'מחק',
+	'paymethod' => 'ניהול שיטות תשלום',
+	'create' => 'צור	',
+		
 ];

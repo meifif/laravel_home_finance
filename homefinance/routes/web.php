@@ -40,13 +40,17 @@ Route::post('/expense', 'ExpenseController@store');
 Route::get('/expense/{expense}', 'ExpenseController@edit');
 Route::patch('/expense/{expense}', 'ExpenseController@update');
 
+//paymethods
+Route::get('/paymethod', 'PaymentmethodController@index');
+Route::post('/paymethod', 'PaymentmethodController@store');
+Route::delete('/paymethod', 'PaymentmethodController@delete');
+Route::patch('/paymethod', 'PaymentmethodController@update');
+
 //scenario route
 Route::get('/scenario/past', 'scenarioController@pastIndex');
 Route::get('/scenario/future', 'scenarioController@futureIndex');
 Route::get('/scenario/current', 'scenarioController@index');
-
 Route::get('/scenario/create', 'scenarioController@create');
 Route::post('/scenario/create', 'scenarioController@store');
-
 Route::get('/scenario/{scenario}', 'scenarioController@edit');
 Route::patch('/scenario/{scenario}', 'scenarioController@update');
