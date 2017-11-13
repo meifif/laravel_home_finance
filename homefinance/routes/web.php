@@ -43,8 +43,8 @@ Route::patch('/expense/{expense}', 'ExpenseController@update');
 //paymethods
 Route::get('/paymethod', 'PaymentmethodController@index');
 Route::post('/paymethod', 'PaymentmethodController@store');
-Route::delete('/paymethod', 'PaymentmethodController@delete');
-Route::patch('/paymethod', 'PaymentmethodController@update');
+Route::delete('/paymethod/{paymentmethod}', 'PaymentmethodController@destroy');
+Route::patch('/paymethod/{paymentmethod}', 'PaymentmethodController@update');
 
 //scenario route
 Route::get('/scenario/past', 'scenarioController@pastIndex');

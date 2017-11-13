@@ -37,7 +37,11 @@ class PaymentmethodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    	$this->validate(request(), [
+    			'name' 	   => 'required|string',   			
+    	]);
+    	paymentmethod::create(request(['name']));
+    	return redirect('/paymethod');
     }
 
     /**
@@ -82,6 +86,8 @@ class PaymentmethodController extends Controller
      */
     public function destroy(paymentmethod $paymentmethod)
     {
-        //
+    	
+    	$paymentmethod->delete();
+    	return redirect('/paymethod');
     }
 }

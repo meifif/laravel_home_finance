@@ -18,6 +18,7 @@ return [
 	'homewelcome' => 'המקום לניהול התקציב הביתי שלכם',
     'delete' => 'מחק',
 	'paymethod' => 'ניהול שיטות תשלום',
-	'create' => 'צור	',
+	'create' => 'צור',
+	'delete' => 'מחק'
 		
 ];
