@@ -12,7 +12,8 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
+	'brand' => 'ניהול התקציב שלי',
+		'dashbord' => 'מרכז שליטה',
     'home' => 'בית',
 	'paymethod' => 'שיטות תשלום',
 
