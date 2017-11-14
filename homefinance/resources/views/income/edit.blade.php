@@ -11,11 +11,6 @@
  {{ Form::text('name', $income->name, ['class' => 'form-control']) }}
  </div>
  
- <div class="form-group">
- {{ Form::label('parent', 'סיווג')}}
- {!! Form::select('parent', $parents, $income->parent, ['class' => 'form-control']) !!}
- </div>
- 
   <div class="form-group">
  {{ Form::label('comments', 'הערות')}}
  {{ Form::textarea('comments', $income->comments, ['class' => 'form-control', 'value' => $income->comments]) }}

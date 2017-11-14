@@ -11,10 +11,6 @@
  {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'לדוגמה: משכורת בן הזוג']) }}
  </div>
  
- <div class="form-group">
- {{ Form::label('parent', 'סיווג')}}
- {!! Form::select('parent', $parents, null, ['class' => 'form-control']) !!}
- </div>
  
   <div class="form-group">
  {{ Form::label('comments', 'הערות')}}

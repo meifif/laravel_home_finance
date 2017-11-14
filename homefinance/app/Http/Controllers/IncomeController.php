@@ -31,8 +31,7 @@ class IncomeController extends Controller
      */
     public function create()
     {
-       	$parents = \App\in_out_type::pluck('name', 'id');
-    	return view('income.create', compact('parents'));
+    	return view('income.create');
     }
 
     /**
@@ -45,11 +44,10 @@ class IncomeController extends Controller
     {
     	$this->validate(request(), [
     			'name' 	   => 'required|string',
-    			'comments' => 'required|string',
-    			'parent'   => 'required|integer'
+    			'comments' => 'string',
     			
     	]);
-    	income::create(request(['name', 'comments', 'parent']));
+    	income::create(request(['name', 'comments']));
     	return redirect('/income');
     }
 
@@ -72,8 +70,7 @@ class IncomeController extends Controller
      */
     public function edit(income $income)
     {
-    	$parents = \App\in_out_type::pluck('name', 'id');
-    	return view('income.edit', compact('income', 'parents'));
+    	return view('income.edit', compact('income'));
     }
 
     /**
@@ -87,8 +84,7 @@ class IncomeController extends Controller
     {
     	$this->validate(request(), [
     			'name' 	   => 'required|string',
-    			'comments' => 'required|string',
-    			'parent'   => 'required|integer'
+    			'comments' => 'string',
     			
     	]);
     	$income->update(request()->all());

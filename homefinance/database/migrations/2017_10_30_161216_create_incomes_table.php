@@ -16,8 +16,6 @@ class CreateIncomesTable extends Migration
         Schema::create('incomes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('parent')->unsigned()->nullable();
-            $table->foreign('parent')->references('id')->on('in_out_types')->onDelete('set null');
             $table->string('comments');
             $table->timestamps();
         });
