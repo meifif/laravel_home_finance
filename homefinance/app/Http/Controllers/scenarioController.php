@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\income;
 use App\Expense;
+use App\paymentmethod;
 
 class scenarioController extends Controller
 {
@@ -46,7 +47,8 @@ class scenarioController extends Controller
     {
         $incomes = income::all();
         $expances = Expense::all();
-        return view('scenario.create', compact('incomes', 'expances'));
+        $paymethod = paymentmethod::pluck('name', 'id');;
+        return view('scenario.create', compact('incomes', 'expances', 'paymethod'));
     }
 
     /**

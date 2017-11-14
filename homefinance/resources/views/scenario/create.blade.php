@@ -56,14 +56,13 @@
 		<tbody>
 			<tr>
 				<td>{{Form::text('fixexpancename', '', ['class' => 'form-control',  'id' => 'fixexpancename', 'disabled' => 'true']) }}
-					{{Form::hidden('fixexpanceid') }}	</td>
+					{{Form::hidden('fixexpanceid') }}</td>
 				<td>{{Form::text('fixexpancevalue', '', ['class' => 'form-control', 'id' => 'fixexpancevalue']) }}</td>
-				<td>{{Form::text('fixexpancepaymethod', '', ['class' => 'form-control', 'id' => 'fixexpancepaymethod']) }}</td>
+				<td>{{Form::select('fixexpancepaymethod', $paymethod, null, ['class' => 'form-control']) }}</td>
 				<td>{{Form::text('fixexpancecomment', '', ['class' => 'form-control', 'id' => 'fixexpancecomment']) }}</td>
 			</tr>
 		</tbody>
 	</table>
-
 </div>
 
 <div class="scenariondiv chengeexpance">
@@ -81,9 +80,9 @@
 		<tbody>
 			<tr>
 				<td>{{Form::text('chengeexpancename', '', ['class' => 'form-control',  'id' => 'chengeexpancename', 'disabled' => 'true']) }}
-					{{Form::hidden('chengeexpanceid') }}	</td>
+					{{Form::hidden('chengeexpanceid') }}</td>
 				<td>{{Form::text('chengeexpancevalue', '', ['class' => 'form-control', 'id' => 'chengeexpancevalue']) }}</td>
-				<td>{{Form::text('chengeexpancepaymethod', '', ['class' => 'form-control', 'id' => 'chengeexpancecomment']) }}</td>
+				<td>{{Form::select('chengeexpancepaymethod', $paymethod, null, ['class' => 'form-control'])}}</td>				
 				<td>{{Form::text('chengeexpancecomment', '', ['class' => 'form-control', 'id' => 'chengeexpancecomment']) }}</td>
 			</tr>
 		</tbody>
