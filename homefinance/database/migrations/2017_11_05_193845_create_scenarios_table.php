@@ -15,6 +15,8 @@ class CreateScenariosTable extends Migration
     {
         Schema::create('scenarios', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('userid')->unsigned()->nullable();
+            $table->foreign('userid')->references('id')->on('users')->onDelete('delete');
             $table->string('name');
             $table->string('description');
             $table->float('totalIncome');
