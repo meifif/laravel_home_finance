@@ -32,13 +32,15 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>{{Form::text('inname', '', ['class' => 'form-control',  'id' => 'inname', 'disabled' => 'true']) }}
-					{{Form::hidden('inname') }}	</td>
-				<td>{{Form::text('invalue', '', ['class' => 'form-control', 'id' => 'invalue']) }}</td>
-				<td>{{Form::text('invalue', '', ['class' => 'form-control', 'id' => 'invalue']) }}</td>
+				<td>{{Form::text('inname', '', ['class' => 'form-control inname', 'disabled' => 'true']) }}
+					{{Form::hidden('innameid') }}	</td>
+				<td>{{Form::number('invalue', '', ['class' => 'form-control invalue']) }}</td>
+				<td>{{Form::text('incoments', '', ['class' => 'form-control incoments']) }}</td>
+				<td><button type="button" class="btn btn-danger deleteRow">@lang('scenario.delete')</button></td>
 			</tr>
 		</tbody>
 	</table>
+		<h2><span>@lang('scenario.totalIncome')</span><span id="totalin">0</span></h2>
 </div>
 
 <div class="scenariondiv fixexpance">
@@ -55,14 +57,16 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>{{Form::text('fixexpancename', '', ['class' => 'form-control',  'id' => 'fixexpancename', 'disabled' => 'true']) }}
+				<td>{{Form::text('fixexpancename', '', ['class' => 'form-control fixexpancename', 'disabled' => 'true']) }}
 					{{Form::hidden('fixexpanceid') }}</td>
-				<td>{{Form::text('fixexpancevalue', '', ['class' => 'form-control', 'id' => 'fixexpancevalue']) }}</td>
+				<td>{{Form::number('fixexpancevalue', '', ['class' => 'form-control fixexpancevalue']) }}</td>
 				<td>{{Form::select('fixexpancepaymethod', $paymethod, null, ['class' => 'form-control']) }}</td>
-				<td>{{Form::text('fixexpancecomment', '', ['class' => 'form-control', 'id' => 'fixexpancecomment']) }}</td>
+				<td>{{Form::text('fixexpancecomment', '', ['class' => 'form-control fixexpancecomment']) }}</td>
+				<td><button type="button" class="btn btn-danger deleteRow">@lang('scenario.delete')</button></td>
 			</tr>
 		</tbody>
 	</table>
+	<h2><span>@lang('scenario.totalFixExpance')</span><span id="totalFixExpance">0</span></h2>
 </div>
 
 <div class="scenariondiv chengeexpance">
@@ -79,14 +83,16 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>{{Form::text('chengeexpancename', '', ['class' => 'form-control',  'id' => 'chengeexpancename', 'disabled' => 'true']) }}
+				<td>{{Form::text('chengeexpancename', '', ['class' => 'form-control chengeexpancename', 'disabled' => 'true']) }}
 					{{Form::hidden('chengeexpanceid') }}</td>
-				<td>{{Form::text('chengeexpancevalue', '', ['class' => 'form-control', 'id' => 'chengeexpancevalue']) }}</td>
+				<td>{{Form::number('chengeexpancevalue', '', ['class' => 'form-control chengeexpancevalue']) }}</td>
 				<td>{{Form::select('chengeexpancepaymethod', $paymethod, null, ['class' => 'form-control'])}}</td>				
-				<td>{{Form::text('chengeexpancecomment', '', ['class' => 'form-control', 'id' => 'chengeexpancecomment']) }}</td>
+				<td>{{Form::text('chengeexpancecomment', '', ['class' => 'form-control chengeexpancecomment']) }}</td>
+				<td><button type="button" class="btn btn-danger deleteRow">@lang('scenario.delete')</button></td>
 			</tr>
 		</tbody>
 	</table>
+	<h2><span>@lang('scenario.totalChengExpence')</span><span id="totalChengExpence">0</span></h2>
 </div>
 
 

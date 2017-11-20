@@ -15,5 +15,9 @@ return [
 
     'newscenario' => 'יצירת תסריט חדש',
 	'startdate' => 'תאריך כניסה לתוקף',
+		'totalIncome' => 'סך הכל הכנסות:',
+		'delete' => 'מחק',
+		'totalFixExpance' => 'סך הכל הוצאות קבועות:',
+		'totalChengExpence' => 'סך הכל הוצאות משתנות:',
 
 ];
