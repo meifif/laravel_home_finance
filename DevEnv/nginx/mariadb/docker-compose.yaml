@@ -6,7 +6,7 @@ services:
     volumes: 
       - ./mariadb.cnf:/etc/mysql/conf.d/mariadb.cnf
       - /home/meir/workspaces/mariadb/10.1.22:/var/lib/mysql
-    restart: always
+    restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: s3EqNi425T
       MYSQL_USER: moealt
